@@ -95,7 +95,7 @@ linkRecords <- function(Zchain, n1, lFNM=1, lFM1=1, lFM2=2, lR=Inf){
 		
 	# temporarily replace all nonlink labels by n1+1
 	Zchain[Zchain > n1+1] <- n1+1
-	tableLabels <- apply(Zchain, 1, tabulate, nbins=max(Zchain))
+	tableLabels <- apply(Zchain, 1, tabulate, nbins=(n1+1))
 	tableLabels <- tableLabels/ncol(Zchain)
 	probNoLink <- tableLabels[n1+1,]
 	# find marginal best option for each record based only on probability
