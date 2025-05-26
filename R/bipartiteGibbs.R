@@ -69,7 +69,7 @@ bipartiteGibbs <- function(cd, nIter=1000, a=1, b=1, aBM=1, bBM=1, seed=0){
 	if( !is.numeric(aBM) | !(aBM>0) ) stop("aBM should be a positive number")
 	if( !is.numeric(bBM) | !(bBM>0) ) stop("bBM should be a positive number")
 		
-	set.seed(seed)
+	# set.seed(seed)
 	
 	n1 <- cd$n1
 	n2 <- cd$n2
